@@ -5,10 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftyMapper",
+    platforms: [.macOS(.v12)],
+    products: [
+        .executable(name: "json2swift", targets: ["json2swift"]),
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .executableTarget(
-            name: "SwiftyMapper"),
+        .executableTarget(name: "json2swift")
     ]
 )
+
